@@ -10,19 +10,19 @@ Koristeći standardne python biblioteke napraviti više procesni sustav koji se 
 Sav ispis se mora izvršavati kroz logger modul te se ispis mora izvršavati u centralni log i pojedinačni log za svaki proces.
 VAŽNO: Redoslijed ispisa nije važan, ali se ispis jednog procesa ne smije ponavljati dok ostali ne ispišu (hint: multiprocessing.Lock). Primjer:
 
-Točno:                    Krivo:
+Točno:....................Krivo:
 
-Proces 2                  Proces 2
+Proces 2....................Proces 2
 
-Proces 3                  Proces 2
+Proces 3....................Proces 2
 
-Proces 1                  Proces 2
+Proces 1....................Proces 2
 
-Proces 2                  Proces 2
+Proces 2....................Proces 2
 
-Proces 3                  Proces 3
+Proces 3....................Proces 3
 
-Proces 1                  Proces 2
+Proces 1....................Proces 2
 
 
 2. Task
@@ -54,4 +54,5 @@ drugi način interprocesne komunikacije koji nije baza podataka.
 
 
 4. Task
+
 Koristeći python Flask napraviti HTTP endpoint koji vraća sadržaj gore navedene tablice poruke.
