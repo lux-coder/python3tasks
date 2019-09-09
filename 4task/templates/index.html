@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="container" style="width:30%">
+			<table class="table table-hover" >
+			
+				<thead class="thead-inverse">
+					<tr>					
+						<th>process_id</th>
+						<th>message</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for singlemessage in message %}
+						<tr class="clickable-row" data-href="{{singlemessage.message}}">
+							<td>{{singlemessage.process_id}}</td>
+							<td>{{singlemessage.message}}</td>
+						
+						</tr>
+					{% endfor %}
+				</tbody>
+				
+			
+			</table>
+		</div>
+                
+                <script>
+                        jQuery(document).ready(function($) {
+                        $(".clickable-row").click(function() {
+                                alert($(this).data("href"));
+                                
+                        });
+                });
+                </script>
+	
+	</body>
+
+</html>
